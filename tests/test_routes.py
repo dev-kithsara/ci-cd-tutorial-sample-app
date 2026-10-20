@@ -57,7 +57,7 @@ class BasicTests(unittest.TestCase):
         self.assertEqual(response.mimetype, 'application/json')
         body = json.loads(response.data)
         self.assertEqual(body['status'], 'healthy')
-        self.assertEqual(body['version'], '1.0.0')
+        self.assertEqual(body['version'], '1.1.0')
 
 if __name__ == "__main__":
     unittest.main()

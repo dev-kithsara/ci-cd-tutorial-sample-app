@@ -4,6 +4,10 @@
 [article](https://medium.com/rockedscience/docker-ci-cd-pipeline-with-github-actions-6d4cd1731030)
 in the **RockedScience** publication on Medium.
 
+## Assignment 02: CI/CD Pipeline Setup and Demonstration
+This repository has been forked for academic demonstration of a Continuous Integration (CI) and Continuous Deployment (CD) pipeline.
+It demonstrates automated build, test execution, and deployment to a staging environment.
+
 ## Description
 
 This sample Python REST API application was written for a tutorial on implementing Continuous Integration and Delivery pipelines.
