@@ -51,8 +51,8 @@ jobs:
             cd ci-cd-tutorial-sample-app
             git pull origin master
 
-            # Build and deploy Docker container
-            docker build -t sample-app .
-            docker stop sample-app || true
-            docker rm sample-app || true
-            docker run -d --name sample-app -p 8000:8000 --restart always sample-app
+            # Build and run Docker container
+            sudo docker build -t sample-app .
+            sudo docker stop sample-app || true
+            sudo docker rm sample-app || true
+            sudo docker run -d --name sample-app -p 8000:8000 --restart always sample-app
