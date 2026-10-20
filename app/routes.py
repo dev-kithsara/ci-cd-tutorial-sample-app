@@ -17,3 +17,10 @@ def menu():
         body = { "error": "Sorry, the service is not available today." }
         status = 404
     return jsonify(body), status
+
+@app.route('/health')
+def health():
+    return jsonify({
+        "status": "healthy",
+        "version": "1.0.0"
+    }), 200

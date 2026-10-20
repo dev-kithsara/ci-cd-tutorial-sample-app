@@ -50,5 +50,14 @@ class BasicTests(unittest.TestCase):
         self.assertTrue('today_special' in body)
         self.assertEqual(body['today_special'], test_name)
 
+    # Test health endpoint
+    def test_health(self):
+        response = self.app.get('/health', follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.mimetype, 'application/json')
+        body = json.loads(response.data)
+        self.assertEqual(body['status'], 'healthy')
+        self.assertEqual(body['version'], '1.0.0')
+
 if __name__ == "__main__":
     unittest.main()
